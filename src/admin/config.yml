@@ -1,12 +1,10 @@
 backend:
   name: git-gateway
   branch: main
-  repo: thunderboiii/schiller-test
-  base_url: https://schiller.maple-ink.com
 media_folder: "public/img/uploads"
 public_folder: "/img/uploads"
-site_url: https://schiller.maple-ink.com
-display_url: https://schiller.maple-ink.com
+site_url: https://schillergymnasium.netlify.app
+display_url: https://schillergymnasium.netlify.app
 locale: 'de'
 collections: 
   - name: 'aktuelles'
