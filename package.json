@@ -14,6 +14,7 @@
     "@11ty/eleventy": "^2.0.1"
   },
   "dependencies": {
+    "@adrianub/cms": "github:njfamirm/decap-cms-github-backend",
     "commonjs": "^0.0.1",
     "composer": "^4.1.0",
     "dav": "^1.8.0",
