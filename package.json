@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@adrianub/cms": "github:njfamirm/decap-cms-github-backend",
+    "@auth0/auth0-react": "^2.2.4",
     "commonjs": "^0.0.1",
     "composer": "^4.1.0",
     "dav": "^1.8.0",

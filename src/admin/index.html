@@ -8,7 +8,6 @@
   <!-- Include the styles for the Netlify CMS UI, after your own styles -->
   <link rel="stylesheet" href="https://unpkg.com/netlify-cms@^1.0.0/dist/cms.css" />
 
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <link rel="shortcut icon" href="/img/icons/config.ico" type="image/x-icon">
 </head>
 <body>
@@ -386,5 +385,40 @@
     // });
 
   </script>
+
+
+<script>
+  import React from 'react';
+  import { createRoot } from 'react-dom/client';
+  import { Auth0Provider } from '@auth0/auth0-react';
+  import App from './App';
+
+  const root = createRoot(document.getElementById('root'));
+
+  root.render(
+  <Auth0Provider
+      domain="dev-gft4kr33wu70esv2.us.auth0.com"
+      clientId="IeMBDabhglYxsiSgbl4dVdi2ihAHpp0n"
+      authorizationParams={{
+        redirect_uri: "https://schillergymnasium-muenster.de/admin"
+      }}
+    >
+      <App />
+    </Auth0Provider>,
+  );
+</script>
+
+<script>
+  import { useAuth0 } from "@auth0/auth0-react";
+  import React from "react";
+
+  const LoginButton = () => {
+    const { loginWithRedirect } = useAuth0();
+
+    return <button onClick={() => loginWithRedirect()}>Log In</button>;
+  };
+
+  export default LoginButton;
+</script>
 </body>
 </html>
