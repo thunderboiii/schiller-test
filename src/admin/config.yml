@@ -2,7 +2,7 @@ backend:
   name: github
   branch: main
   repo: thunderboiii/schiller-test
-  base_url: https://schiller.maple-ink.com
+  base_url: https://schiller-oauth.glitch.com
 media_folder: "public/img/uploads"
 public_folder: "/img/uploads"
 site_url: https://schillergymnasium.netlify.app
