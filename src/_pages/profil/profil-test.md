@@ -1,5 +1,5 @@
 ---
-title: Profil Test
+title: Profil Test 4343
 titleUp: Profil
 titleDown: am Schillergymnasium
 order: 3
