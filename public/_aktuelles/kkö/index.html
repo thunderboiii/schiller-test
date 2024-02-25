@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schüler:innenvertretung</title>
+    <title>kkö</title>
 
     <link rel="stylesheet" href="/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -472,87 +472,19 @@
     <div class="hero-center">
         <div class="upper-title">
             <img class="decoration-l" src="/img/icons/icon_var2.svg" alt="">
-            
-                <h2>Schüler:innenvertretung</h2>
-            
+            <h2>kkö</h2>
             <img class="decoration-r" src="/img/icons/icon_var2.svg" alt="">
         </div>
         <div class="main-title">
-            
-                <h1>Die SV</h1>
-            
+            <h1>Aktuelles</h1>
         </div>
         <div class="lower-title">
             <hr>
-            <h2>des Schillergymnasiums</h2>
+                <h2>vom Schillergymnasium</h2>
             <hr>
         </div>
 
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-                
-                    <img class="background" src="/img/uploads/sv-2-.jpg" alt="" style="object-position: top;">
-                
-                    <img class="background" src="/img/uploads/sv-nikolaus.jpg" alt="" style="object-position: top;">
-                
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-
-        <script src="/scripts/banner.js"></script>
+        <img class="background" src="/img/uploads/20230320_114436-orléans-2.jpeg" alt="">
     </div>
 
     <div class="lower-hero">
@@ -575,27 +507,60 @@
 </section>
 
 <section class="contents">
-    <div class="content page-content">
-        <center><div class="title"><h4>Schülervertretung</h4><h2>SV-Aktivkreis am Schiller </h2></div></center>
-<p>Hallo,</p>
-<p>Wir sind der SV-Aktivkreis und dafür zuständig eure Interessen und Ideen zu vertreten. Außerdem gestalten wir jedes Jahr verschiedene Events, wie zum Beispiel die 6/7/8 Party oder neuerdings auch wieder den Schillerball im Winter. Wenn du dich dafür interessierst, mit zu planen und zu gestalten, freuen wir uns auf deine Ideen.  <br>
-Jeder ist willkommen, unabhängig von Stufe und Alter! <br>
-Wir treffen uns jeden Donnerstag in der Mittagspause im Raum F101.</p>
-<p>Schau gerne mal vorbei, wir freuen uns auf Dich! <br>
-Deine/Eure SV am Schiller</p>
-<h2>Schülersprecher:innen Team 2023/2024</h2>
-<p>Dieses Jahr (2023/24) besteht der Schülersprecher:innen Team aus Joy Ann Giesen (Q1), Philipp Göhde (Q2), Luca Näpel (Q2) und Jos Jacobs (Klasse 10).</p>
-<p><img src="/img/uploads/dsc_5576.jpeg" alt="Die Schülersprecher:innen der Schillergymnasium Münsters"></p>
-<p><br>
-Als SV-Lehrer wurden Frau Heiny und Herr Meyer dieses Mal gewählt.</p>
-<p><img src="/img/uploads/sv_lehrer.jpg" alt="Die SV Lehrer des Schillergymnasiums Münsters"></p>
-<center><div class="title"><h4>Schillerball</h4><h2>Der Schillerball</h2></div></center>
-<h2>Ein Abend des Glanzes und der Gemeinschaft</h2>
-<p><img src="/img/uploads/png-image.png" alt=""></p>
-<p><br>
-Im Februar 2023 erlebte die Schulgemeinschaft einen unvergesslichen Abend, als der Schillerball nach vielen Jahren wieder ins Leben gerufen wurde. Organisiert von der Schülervertretung (SV), vereinte der exklusive Ball Lehrer, Schüler und Ehemalige in einer festlichen Atmosphäre.</p>
-<p>Die Aula war festlich geschmückt, und die Gäste erschienen in eleganter Abendgarderobe. Der Abend bot nicht nur Tanz und Musik, sondern auch Gelegenheit für Gespräche und Erinnerungen. Alte Freunde trafen sich wieder, und neue Bindungen wurden geknüpft.</p>
-<p>Der Schillerball war eine Nacht des Glanzes und der Gemeinschaft, die die Bedeutung von Bildung und Zusammengehörigkeit hervorhob. Aufgrund des großen Erfolgs wird dieser Ball nun zur Tradition, und die Schulgemeinschaft freut sich bereits auf die kommenden Jahre, in denen sie erneut zusammenkommen wird, um zu feiern und sich zu erinnern.</p>
+    <div class="content post">
+        <h1>kkö</h1>
+        
+        <p>dfgdfgddg</p>
+
+
+        <p id="description" style="display: none;"></p>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            // Find the div with the class "content"
+            const contentDiv = document.querySelector('.content');
+
+            // Find all paragraphs within the "content" div
+            const paragraphs = contentDiv.querySelectorAll('p');
+
+            let foundParagraph = false;
+
+            // Loop through each paragraph
+            for (let i = 0; i < paragraphs.length; i++) {
+                const paragraph = paragraphs[i];
+
+                // Check if the paragraph has text content
+                if (paragraph.textContent.trim() !== '') {
+                foundParagraph = true;
+                const content = paragraph.textContent;
+                let displayContent;
+
+                // Check if the content exceeds the character limit
+                if (content.length > 200) {
+                    // Trim the content to the character limit and add "..."
+                    displayContent = content.substring(0, 200) + '...';
+                } else {
+                    // If the content is within the character limit, use it as is
+                    displayContent = content;
+                }
+
+                // Create a new paragraph element with the id "description"
+                const descriptionParagraph = document.getElementById('description');
+                
+                // Set the content of the new paragraph
+                descriptionParagraph.textContent = displayContent;
+
+                // Break out of the loop after processing the first paragraph with text content
+                break;
+                }
+            }
+
+            // If no paragraph with text content is found
+            if (!foundParagraph) {
+                console.log('No paragraph with text content found.');
+            }
+            });
+        </script>
 
     </div>
 </section>

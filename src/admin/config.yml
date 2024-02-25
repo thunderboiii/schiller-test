@@ -3,6 +3,7 @@ backend:
   branch: main
   repo: thunderboiii/schiller-test
   base_url: https://schiller-oauth.glitch.me
+  webhook_endpoint: https://schiller.maple-ink.com/webhook
 media_folder: "public/img/uploads"
 public_folder: "/img/uploads"
 site_url: https://schillergymnasium-muenster.com
