@@ -1,5 +1,5 @@
 ---
-title: Digitales Lernen
+title: Digitales Lernen 44343
 order: 4
 banners:
   - banner: /img/uploads/sdg-würfel.jpeg
