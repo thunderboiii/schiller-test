@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build Site
-        run: npm run dev
+        run: npm run build
