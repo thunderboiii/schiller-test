@@ -13,5 +13,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Install Eleventy globally
+        run: npm install -g @11ty/eleventy
+
       - name: Build Site
-        run: npm run build
+        run: eleventy
