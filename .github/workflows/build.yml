@@ -16,7 +16,7 @@ jobs:
       - name: Set Eleventy Output Directory
         run: |
           mkdir -p public
-          echo "module.exports = function(eleventyConfig) { eleventyConfig.setOutputDir('public'); };" > .eleventy.js
+          echo "module.exports = function() { return { dir: { input: 'src', output: 'public' } } };" > .eleventy.js
 
       - name: Install Dependencies
         run: npm install
