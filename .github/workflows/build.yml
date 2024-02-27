@@ -22,7 +22,12 @@ jobs:
       - name: Build Site
         run: npm run build
 
-      - name: Deploy Site
-        run: ssh -o StrictHostKeyChecking=no -p 65002 u261657911@217.21.77.165 "cd /public_html/schiller/ && rm -rf *"
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy to server
+        run: |
+          ssh -p 65002 u261657911@217.21.77.165 "cd /public_html/schiller/ && rm -rf *"
+          scp -r -P 65002 ./public/* u261657911@217.21.77.165:/public_html/schiller/
