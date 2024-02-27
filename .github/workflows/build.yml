@@ -1,4 +1,4 @@
-name: Build 11ty Site
+name: Build and Deploy
 
 on:
   push:
@@ -10,19 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm install
-
-      - name: Install Eleventy globally
-        run: npm install -g @11ty/eleventy
 
       - name: Build Site
         run: npm run build
 
-      - name: Deploy to Hosting Provider
-        run: scp -r -P 65002 ./public/* -l u261657911 217.21.77.165:/public_html/schiller/
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Deploy Site
+        run: scp -r -P 65002 ./public/* -l u261657911 kysdAk-supwu1-vatgud@217.21.77.165:/public_html/schiller/
