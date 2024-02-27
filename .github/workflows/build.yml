@@ -25,7 +25,46 @@ jobs:
       - name: Setup SSH
         uses: webfactory/ssh-agent@v0.5.3
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh-private-key: |
+            -----BEGIN RSA PRIVATE KEY-----
+            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
+            -----END RSA PRIVATE KEY-----
+
 
       - name: Deploy to server
         run: |
