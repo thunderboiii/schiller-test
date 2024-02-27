@@ -51,7 +51,10 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             ssh -p 65002 u261657911@217.21.77.165 "cd /public_html/schiller/ && rm -rf *"
-
+      
       - name: SSH into Server and Build
-        run: |
-          ssh -p 65002 u261657911@217.21.77.165 "cd /public_html/schiller && npm install && npm run build"
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            ssh -p 65002 u261657911@217.21.77.165 "cd /public_html/schiller && npm install && npm run build"
