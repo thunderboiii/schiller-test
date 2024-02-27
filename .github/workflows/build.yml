@@ -23,4 +23,4 @@ jobs:
         run: npm run build
 
       - name: Deploy Site
-        run: scp -r -P 65002 ./public/* -l u261657911 kysdAk-supwu1-vatgud@217.21.77.165:/public_html/schiller/
+        run: scp -r -P 65002 ./public/* u261657911:kysdAk-supwu1-vatgud@217.21.77.165:/public_html/schiller/
