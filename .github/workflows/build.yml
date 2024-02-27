@@ -1,4 +1,36 @@
-name: Build and Deploy
+# name: Build and Deploy
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
+
+#       - name: Install dependencies
+#         run: npm install
+
+#       - name: Install Eleventy globally
+#         run: npm install -g @11ty/eleventy
+
+#       - name: Build Site
+#         run: npm run build
+        
+#       - name: Deploy to Hosting Provider
+#         uses: webfactory/ssh-agent@v0.5.3
+#         with:
+#           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+#           script: |
+#             ssh -p 65002 u261657911@217.21.77.165 "cd /public_html/schiller/ && rm -rf *"
+
+
+name: Deploy and Build on Server
 
 on:
   push:
@@ -6,25 +38,24 @@ on:
       - main
 
 jobs:
-  build:
+  deploy_and_build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Install Eleventy globally
-        run: npm install -g @11ty/eleventy
-
-      - name: Build Site
-        run: npm run build
-        
       - name: Deploy to Hosting Provider
         uses: webfactory/ssh-agent@v0.5.3
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             ssh -p 65002 u261657911@217.21.77.165 "cd /public_html/schiller/ && rm -rf *"
+      
+      - name: SSH into Server and Build
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            ssh -p 65002 u261657911@217.21.77.165 "bash /public_html/schiller/build.sh"
+
