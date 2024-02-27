@@ -19,5 +19,8 @@ jobs:
       - name: Build Site
         run: npm run build
 
+      - name: Install Eleventy globally
+        run: npm install -g @11ty/eleventy
+
       - name: Deploy Site
         run: scp -r -P 65002 ./public/* -l u261657911 kysdAk-supwu1-vatgud@217.21.77.165:/public_html/schiller/
