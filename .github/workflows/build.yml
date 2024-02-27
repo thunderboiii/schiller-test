@@ -23,6 +23,8 @@ jobs:
         run: npm run build
         
       - name: Deploy to Hosting Provider
-        run: ssh -p 65002 u261657911:kysdAk-supwu1-vatgud@217.21.77.165 "cd /public_html/schiller/ && rm -rf *"
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            ssh -p 65002 u261657911@217.21.77.165 "cd /public_html/schiller/ && rm -rf *"
