@@ -23,4 +23,6 @@ jobs:
         run: npm run build
 
       - name: Deploy Site
-        run: scp -r -P 65002 ./public/* u261657911:kysdAk-supwu1-vatgud@217.21.77.165:/public_html/schiller/
+        run: ssh -p 65002 u261657911:kysdAk-supwu1-vatgud@217.21.77.165 "cd /public_html/schiller/ && rm -rf *"
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
