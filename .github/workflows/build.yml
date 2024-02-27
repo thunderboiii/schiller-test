@@ -57,4 +57,5 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            ssh -p 65002 u261657911@217.21.77.165 "cd /public_html/schiller && npm install && npm run build"
+            ssh -p 65002 u261657911@217.21.77.165 "bash /public_html/schiller/build.sh"
+
