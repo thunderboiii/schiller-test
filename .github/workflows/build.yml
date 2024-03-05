@@ -27,5 +27,4 @@ jobs:
         
       - name: Deploy to Hosting Provider
         run: |
-          chmod +x build.sh
-          ./build.sh
+          lftp -u "u261657911.maple-ink.com,ftp:maple-1NK" -e "set ssl:verify-certificate no; mirror -R ./public /public_html/schiller; exit" ftp://femboy-heaven.com
