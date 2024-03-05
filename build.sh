@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # FTP credentials
-FTP_HOST="217.21.77.165"
+FTP_HOST="ftp://femboy-heaven.com"
 FTP_USER="u261657911"
 FTP_PASS="ftp:maple-1NK"
 
