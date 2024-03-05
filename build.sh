@@ -2,7 +2,7 @@
 
 # FTP credentials
 FTP_HOST="ftp://femboy-heaven.com"
-FTP_USER="u261657911"
+FTP_USER="u261657911.maple-ink.com"
 FTP_PASS="ftp:maple-1NK"
 
 # Directory containing files to upload
