@@ -23,39 +23,6 @@ jobs:
         run: npm run build
         
       - name: Deploy to Hosting Provider
-        uses: webfactory/ssh-agent@v0.5.3
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            ssh -p 65002 u261657911@217.21.77.165 "cd /public_html/schiller/ && rm -rf *"
-
-
-# name: Deploy and Build on Server
-
-# on:
-#   push:
-#     branches:
-#       - main
-
-# jobs:
-#   deploy_and_build:
-#     runs-on: ubuntu-latest
-
-#     steps:
-#       - name: Checkout repository
-#         uses: actions/checkout@v4
-
-#       - name: Deploy to Hosting Provider
-#         uses: webfactory/ssh-agent@v0.5.3
-#         with:
-#           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-#           script: |
-#             ssh -p 65002 u261657911@217.21.77.165 "cd /public_html/schiller/ && rm -rf *"
-      
-#       - name: SSH into Server and Build
-#         uses: webfactory/ssh-agent@v0.5.3
-#         with:
-#           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-#           script: |
-#             ssh -p 65002 u261657911@217.21.77.165 "bash /public_html/schiller/build.sh"
-
+        run: |
+          chmod +x build.sh
+          ./build.sh
